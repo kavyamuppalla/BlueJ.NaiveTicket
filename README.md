@@ -14,15 +14,23 @@ Work through all these exercises. You edit this file with your answers for these
 * Use `insertMoney` method to simulate inserting an amount of money into the machine.
 * Use `getBalance` to check that the machine has a record of the amount inserted.
 	* You can insert several separate amounts of money into the machine, just like you might insert multiple coins or notes into a real machine. Try inserting the exact amount required for a ticket. As this is a simple machine, a ticket will not be issued automatically, so once you have inserted enough money, call the `printTicket` method. A facsimile ticket should be printed in the BlueJ terminal window.
+    
+    **_Kavya: Refer to modified files for the above steps_**
 
 ### Exercise 2.2
 * What value is returned if you check the machine’s balance after it has printed a ticket?
+**_Kavya: Balance after printing ticket is always 0_**
 
 ### Exercise 2.3
 * Experiment with inserting different amounts of money before printing tickets.
-	* Do you notice anything strange about the machine’s behavior?
+	* Do you notice anything strange about the machine’s behavior?     
+	**_Kavya: Yes, ticket is printed without enough balance and no refund received for extra balance._** 
+	    
 	* What happens if you insert too much money into the machine – do you receive any refund?
+	**_Kavya: No._**   
+        
 	* What happens if you do not insert enough and then try to print a ticket?
+        **_Kavya: Ticket is printed._**
 
 ### Exercise 2.4
 * Try to obtain a good understanding of a ticket machine’s behavior by interacting with it on the object bench before we start looking at how the `TicketMachine` class is implemented in the next section.
@@ -31,9 +39,17 @@ Work through all these exercises. You edit this file with your answers for these
 * Create another ticket machine for tickets of a different price.
 	* Buy a ticket from that machine.
 	* Does the printed ticket look different?
+	
+     **_Kavya: Yes (price is different for tickets issued by both the machines)._**
 
 ### Exercise 2.6
 * Write out what you think the outer wrappers of the `Student` and `LabClass` classes might look like – do not worry about the inner part.
+
+**_Kavya:_**
+    
+    `public class Student`
+    
+    `public class LabClass`
 
 ### Exercise 2.7
 Does it matter whether we write<br>
@@ -44,28 +60,55 @@ in the outer wrapper of a class?
 
 * Edit the source of the `TicketMachine` class to make the change and then close the editor window.
 	* Do you notice a change in the class diagram?
+            
+	 **_Kavya: Yes, compilation error._**
 	* What error message do you get when you now press the compile button?
+            
+	 **_Kavya:_** There are 4 errors:
+	 
+	 - identifier excepted
+         - illegal start of expression
+         - invalid declaration 
+         - return type required
+		
 	* Do you think this message clearly explains what is wrong?
+	
+     **_Kavya: Yes, the error message is "identifier expected" which means class name is expected_**
 
 ### Exercise 2.8
 * Check whether or not it is possible to leave out the word `public` from the outer wrapper of the `TicketMachine` class.
+
+   **_Kavya: Yes, there is no error when public is removed from the TicketMachine class declaration_**
 
 ### Exercise 2.9
 * From your earlier experimentation with the ticket machine objects within BlueJ you can probably remember the names of some of the methods – `printTicket`, for instance.
 	* Look at the class definition in Code 2.1 and use this knowledge, along with the additional information about ordering we have given you, to try to make a list of the names of the fields, constructors, and methods in the `TicketMachine` class.
 	* Hint: There is only one constructor in the class.
+	
+	**_Kavya:_**
+           
+	 * Fields in TicketMachine - price, balance, total, status
+         * Constructors in TicketMachine - TicketMachine(int ticketCost)
+         * Methods in TicketMachine - getPrice(), getBalance(), insertMoney(int amount), printTicket().
 
 ### Exercise 2.10
 * Do you notice any features of the constructor that make it significantly different from the other methods of the class?
+    
+    **_Kavya: It has same name as the class name_**
 
 ### Exercise 2.11
 * What do you think is the type of each of the following fields?
 
 ```java
-private int count;
+private int count;  
 private Student representative;
 private Server host;
 ```
+**_Kavya:_**
+
+ * int is the type for count
+ * Student is the type for representative
+ * Server is the type for host
 
 ### Exercise 2.12
 * What are the names of the following fields?
@@ -75,6 +118,8 @@ private boolean alive;
 private Person tutor;
 private Game game;
 ```
+  **_Kavya: alive, tutor, game._**
+
 ### Exercise 2.13
 
 In the following field declaration from the TicketMachine class<br>
@@ -86,33 +131,45 @@ does it matter which order the three words appear in?
 * Edit the `TicketMachine` class to try different orderings. After each change, close the editor.
 	* Does the appearance of the class diagram after each change give you a clue as to whether or not other orderings are
 possible?
-	* Check by pressing the compile button to see if there is an error message.
-	* Make sure that you reinstantiate the original version after your experiments!
 
+	* Check by pressing the compile button to see if there is an error message.
+    
+	* Make sure that you reinstantiate the original version after your experiments!
+    
+   **_Kavya: Yes, ordering is important. Changing the order gives compilation error_**
+            
 ### Exercise 2.14
-* Is it always necessary to have a semicolon at the end of a field declaration?
-* Once again, experiment via the editor.
+* Is it always necessary to have a semicolon at the end of a field declaration?  Yes
+* Once again, experiment via the editor. **_Kavya: Compilation Error without semicolon at the end of declaration_**
 * The rule you will learn here is an important one, so be sure to remember it.
 
 
 ### Exercise 2.15
 * Write in full the declaration for a field of type `int` whose name is `status`.
 
+**_Kavya:_**
+
+`private int status;`
+
 ### Exercise 2.16
-* To what class does the following constructor belong?
+* To what class does the following constructor belong? 
 ```
 public Student(String name)
 ```
+**_Kavya: Student_**
 
 ### Exercise 2.17
 * How many parameters does the following constructor have and what are their types?
 ```
 public Book(String title, double price)
 ```
+**_Kavya: There are two parameters and their types are String and double_**
 
 ### Exercise 2.18
 * Can you guess what types some of the `Book` class’s fields might be?
+    **_Kavya: String and double_**
 * Can you assume anything about the names of its fields?
+    **_Kavya: title and price_**
 
 Work all Exercises from 2.19 to 2.58 that are **NOT** marked *Challenge exercise*.
 READ upto and INCLUDING section 2.15 of this chapter.
